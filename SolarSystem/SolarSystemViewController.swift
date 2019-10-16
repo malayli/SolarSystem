@@ -53,8 +53,8 @@ final class SolarSystemViewController: UIViewController {
         layer.add(orbit, forKey: key)
     }
     
-    override func viewWillLayoutSubviews() {
-        super.viewWillLayoutSubviews()
+    override func viewDidLoad() {
+        super.viewDidLoad()
         
         let sunLayer = sphereLayer(radius: Sun.radius, color: .orange, at: CGPoint(x: view.frame.size.width/2, y: view.frame.size.height/2))
         view.layer.addSublayer(sunLayer)
